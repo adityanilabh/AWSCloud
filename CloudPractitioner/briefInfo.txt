@@ -1,0 +1,2 @@
+This folder contains all the conceptual concepts that revolve around AWS.
+This folder contains enough resources to clear your AWS certfication.

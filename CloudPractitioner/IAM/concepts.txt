@@ -1,0 +1,50 @@
+-Identity and access manager in short IAM.
+- It's equialent to Azure active directory
+- IAM is a global service.
+
+-----------------------------GROUPS AND USERS-----------------------------------
+- groups can only contains user and not other groups.
+- why we use groups?
+  -- suppose i want to give similar set of access to some aws resources, then we create
+     give access to groups.
+
+- Users may belong to different groups. and user can also may not belong to any groups.
+
+--------------------HOW TO GIVE ACCESS TO USER FOR AWS --------------------------
+-- user or group can be assigned json document called policies.
+--To restrict access to specific users for the backend of your website using AWS IAM, you can follow these general steps:
+
+---Create IAM Users:
+
+--Create individual IAM users for each person who needs access to the backend of your website. You can do this in the AWS Management Console or using AWS CLI/API.
+Define Policies:
+
+--CREATE IAM POLICIES that define the permissions required for accessing the backend resources. These policies should grant permissions only to the specific AWS resources (e.g., EC2 instances, Lambda functions, RDS databases) needed for the backend.
+You can create custom policies or use AWS-managed policies.
+Attach Policies to Users:
+
+--ATTACH THE IAM POLICIES to the IAM users you created in step 1. This associates the defined permissions with each user.
+Use IAM Groups (Optional):
+
+-----If you have multiple users who require the same set of permissions, consider creating IAM groups. Attach policies to groups, and then add users to those groups.
+Access Management Best Practices:
+
+-----Follow the principle of least privilege. Only grant the minimum permissions necessary for users to perform their tasks.
+Regularly review and audit IAM policies to ensure they align with your security requirements.
+
+
+
+--------------------STRUCTURE OF JSON POLICY OF IAM------------------------------
+
+1. json policy consist of 
+    -- version : policy language version
+    -- id : identifier for policy(optional)
+    -- statement: one or more statements
+2. statement consist of:
+    --sid : identifier of statement(optional)
+    --effect: allow or denies
+    --principal: acount/user/role
+    --action: list of actions policy denies or allow
+    --resources: list of resources effect applies to
+    --condition
+
