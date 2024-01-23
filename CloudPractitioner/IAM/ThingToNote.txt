@@ -1,0 +1,4 @@
+-- always create iam user for you, and then give all access. 
+-- it's a bad convention to do everything with root user id.
+-- so login with iam user id and password. copy link for that iam userid as well.
+-- inline policy only attached to user.
